@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    // task 1   
+    //   1. Even numbers printing up to 50 numbers 
+    //   2. by using for loop 
+    //   3. by checking condition and if condition i%2==0
+    //   3. after checking if condition   if we get reminder zero then the number will print otherwse it will not print
+
+        for(i = 1; i<=50; i++){
+            if(i%2==0){
+                console.log(i,"even number");
+            }
+        }
+
+    //    TRACING 
+    
+   //   i value     condition         block            if condition                 updation
+   //      1         1<=50 true         1          1%2==0 false                       1+1=2
+   //                                             (1 will not print in console)
+   //      2         2<=50 true         2          2%2==0  true                       2+1=3
+   //                                             (2 will print in console) 
+  //       3         3<=50 true         3          3%2==0  false                      3+1=4   
+  //                                              (3 will not print in console)
+  //       4         4<=50 true         4          4%2==0  true                       4+1=5
+  //                                              (4 will print in console)
+  //       49        49<=50 true       49          49%==0  false                      49+1=50
+  //                                              (49 wont print in console)
+  //       50        50<=50 true       50          50%==0  true                       50+1=51
+  //                                              (50 will print in console)
+  //       51        51<=50 false      51         (51 will not be print ) 
+  //                                               loop will end
+
+  
+  // NOTE OUTPUT (2, 4, 6, 8, 10, _______________________ 50)
+  // all even numbers are will printed beacause reminder 0
+  // all odd numbers will not printed beacause  reminder !0
+//___________________________________________________________________________________________
+    
+    // TASK 2
+    //  1.Finding multiples of 5 
+    //  2. by using for loop 
+    //  3. by checking condition and if condition i%5==0
+    //  3. after checking if condition   if we get reminder zero then that number will print otherwse it will not print
+
+
+        for(i=1;i<=50;i++){
+             if(i%5==0){
+             console.log(i," is multiples of 5");
+            }
+        }  
+
+   //   TRACING
+    //   i value     condition         block            if condition                 updation
+   //      1         1<=50 true         1          1%5==0 false                       1+1=2
+   //                                             (1 will not print in console)
+   //      2         2<=50 true         2          2%5==0  true                       2+1=3
+   //                                             (2 will  not print in console) 
+  //       3         3<=50 true         3          3%5==0  false                      3+1=4   
+  //                                              (3 will  not print in console)
+  //       4         4<=50 true         4          4%5==0  true                       4+1=5
+  //                                              (4 will  not print in console)
+  //       5         5<=50 true         5          5%5==0  true                       5+1=6
+  //                                              (5 will  print  in console)
+  //       10        50<=50 true        10         10%5==0 true                       10+1=11
+  //                                              (10 will print  in console)
+  //       15        51<=50 false       15        (15 will print  in console)          15+1=16
+  //                                               
+
+  //  OUTPUT   ( 5, 10, 15, 20, 25-----------------------------50) Because reminder is = 0
+  //             remaining all numbers will not be print           Beacuse reminder is != 0
+
+  //  TASK----3 
+  //  1. Finding a factorial of number ex 5 is a number then factorial 0f 5 is 5*4*3*2*1
+  //  2. By using for loop and take fact as 1
+
+                  fact=1
+                  for(i=1;i<=5;i++){
+                  console.log(i);
+                  fact=fact*i;
+                }
+                  console.log(fact);
+
+  //  TRACING
+  //    i value   condition         fact        fact=fact*i         updation    
+  //       1       1<=5 true          1         fact= 1*1=1           1+1= 2
+  //       2       2<=5 true          1         fact= 1*2=2           2+1= 3
+ //        3       3<=5 true          2         fact= 2*3=6           3+1= 4
+ //        4       4<=5 true          6         fact= 6*4=24          4+1= 5
+ //        5       5<=5 true          24        fact= 24*5=120        5+1= 6
+  //       6       6<=5 false        (loop ennds here)
+
+  //    OUTPUT  5*4*3*2*1 = 120
+
+
+   
+
+  //  TASK 5
+  //  1. print the alpabet from a to z
+  //  2.  The range of ASCII values for uppercase letters A-Z is 65-90, and the range for lowercase letters a-z is 97-122.
+
+           sum ="";
+           for(i=65;i<=90;i++){
+           sum+=String.fromCharCode(i)
+            }
+             console.log(sum);
+
+             sum ="";
+             for(i=97;i<=122;i++){
+             sum+=String.fromCharCode(i)
+              }
+               console.log(sum);
+  
+
+               sum ="";
+               for(i=49;i<=57;i++){
+               sum+=String.fromCharCode(i)
+                }
+                 console.log(sum);
+
+
+   //   TASK 5
+  //   1. Multiplication table from 1 to 5
+
+
+            
+           for(i = 1;i<=5; i++){
+            for(j=1;j<=10; j++){
+                console.log(i," * ",j, " = ", i*j);
+            }
+           }
+
+ //  TRACING 
+
+//  i   i<=5        print i       j       j<=10          print j        j++           i++
+//  1   1<=5 true       1         1       1<=10 true        1          1+1=2          
+//                                2       2<=10  true       2          2+1=3   
+//                                3       3<=10  true       3          3+1=4
+//                                4       4<=10  true       4          4+1=5  
+//                                5       5<=10  true       5          5+1=6  
+//                                6       6<=10  true       6          6+1=7  
+//                                7       7<=10  true       7          7+1=8
+//                                8       8<=10  true       8          8+1=9  
+//                                9       9<=10  true       9          9+1=10        
+//                               10      10<=10  true      10         10+1=11       
+//                               11      11<=10  false     loop ends here it will goes i++ 
+//                                                                                        1+1=2  
+
+
+//  2   2<=5 true       1         1       1<=10  true       1          1+1=2          
+//                                2       2<=10  true       2          2+1=3   
+//                                3       3<=10  true       3          3+1=4
+//                                4       4<=10  true       4          4+1=5  
+//                                5       5<=10  true       5          5+1=6  
+//                                6       6<=10  true       6          6+1=7  
+//                                7       7<=10  true       7          7+1=8
+//                                8       8<=10  true       8          8+1=9  
+//                                9       9<=10  true       9          9+1=10        
+//                               10      10<=10  true      10         10+1=11       
+//                               11      11<=10  false     loop ends here it will goes i++ 
+//                                                                                        2+1=3 
+
+
+//  1   3<=5 true       1         1       1<=10  true       1          1+1=2          
+//                                2       2<=10  true       2          2+1=3   
+//                                3       3<=10  true       3          3+1=4
+//                                4       4<=10  true       4          4+1=5  
+//                                5       5<=10  true       5          5+1=6  
+//                                6       6<=10  true       6          6+1=7  
+//                                7       7<=10  true       7          7+1=8
+//                                8       8<=10  true       8          8+1=9  
+//                                9       9<=10  true       9          9+1=10        
+//                               10      10<=10  true      10         10+1=11       
+//                               11      11<=10  false     loop ends here it will goes i++ 
+//                                                                                        3+1=4 
+
+
+//  1  4<=5 true       1          1       1<=10 true        1          1+1=2          
+//                                2       2<=10  true       2          2+1=3   
+//                                3       3<=10  true       3          3+1=4
+//                                4       4<=10  true       4          4+1=5  
+//                                5       5<=10  true       5          5+1=6  
+//                                6       6<=10  true       6          6+1=7  
+//                                7       7<=10  true       7          7+1=8
+//                                8       8<=10  true       8          8+1=9  
+//                                9       9<=10  true       9          9+1=10        
+//                               10      10<=10  true      10         10+1=11       
+//                               11      11<=10  false     loop ends here it will goes i++ 
+//                                                                                        4+1=5 
+
+
+//  1   5<=5 true       1         1       1<=10 true        1          1+1=2          
+//                                2       2<=10  true       2          2+1=3   
+//                                3       3<=10  true       3          3+1=4
+//                                4       4<=10  true       4          4+1=5  
+//                                5       5<=10  true       5          5+1=6  
+//                                6       6<=10  true       6          6+1=7  
+//                                7       7<=10  true       7          7+1=8
+//                                8       8<=10  true       8          8+1=9  
+//                                9       9<=10  true       9          9+1=10        
+//                               10      10<=10  true      10         10+1=11       
+//                               11      11<=10  false     loop ends here it will goes i++ 
+//                                                                                        5+1=6
+
+
+//  6  6<=5 false     it is false loop ends here  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script> 
+
+
+</body>
+</html>
